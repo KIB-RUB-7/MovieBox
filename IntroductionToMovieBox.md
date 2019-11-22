@@ -258,7 +258,7 @@ While these will vary depending on the app stores being submitted to, below are 
 
 -------------------------------------------------------------------------------
 
-## 8. Developers & Contributor(s)
+## 8. Developers & Contributors
 
 * [**Kibwila Panehsy K.**](https://github.com/KIB-Phi-Kif)
 
