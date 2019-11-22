@@ -8,10 +8,10 @@ Welcome to this project about Mobile App using the React Native framework! This 
 You all know this situation where you discuss a movie with your friends, you boast of its merits, but you can not remember the title! 
 Or this text that we receive: "Hey, what's the name of the movie you've already told me about?"
 
-No more blockages, endless expectations, grilled neurons to think. I propose here to make a mobile application to manage your movies.
+No more blockages, endless expectations, grilled neurons to think. Here we propose to make a mobile application to manage your movies.
 
 So, we're going to build a mobile App that will save us time and space memory of our human brain;
-In addition, the list of films will contain a description of each film, facilitating the task when we share a film with a friend. We will not need to make long comments about the movie.
+In addition, the list of movies'll contain a description of each movie, facilitating the task when we share a movie with a friend. We won't need to make long comments about the movie.
 
 -------------------------------------------------------------------------------
 
@@ -19,7 +19,7 @@ In addition, the list of films will contain a description of each film, facilita
 
   * To be able to follow this project, you must know the basics of Object Oriented Programming (OOP) and Javascript: create a function, a variable, import a file or manipulate an object.
 
-  * You do not need to know 'React Native' to keep pace with our project。
+  * You don't need to know 'React Native' to keep pace with our project。
 
   * You can check this official web page of ['React Native'](https://facebook.github.io/react-native/docs/getting-started.html#using-a-virtual-device) to get an idea of ​​what it looks like and to find out what it is ...
 
@@ -45,7 +45,7 @@ Our team of work includes 2 developers, both are students in computer science an
    * RUBANGO MUSIMWA MARIE I.N. (Assistant Captain)
 
 
-### 2.2 responsibilities of each developer
+### 2.2 Responsibilities of each developer
 
    * KIBWILA PHINEES KIFILU :
 
@@ -80,7 +80,7 @@ No matter how well people do their design and coding work, programs that don't m
    * Search and display a list of movies retrieved from a URL;
    * Manage application data by annotating favorite movies;
    * Share movies with your contacts with iOS / Android sharing;
-   * use the native components of the phone, taking a photo or selecting it in your gallery;
+   * use the native components of the phone, taking a picture or selecting it in your gallery;
 
 i
 Visually, here is what our final application will look like :    ...
@@ -100,9 +100,9 @@ A vision statement defines a clear direction towards the end goal of the mobile 
 On top of that, a vision statement describes the solution to the problem your intended users are facing. 
 
 Our mobile application will solve the common problem that each of us has faced once in his life.
-Forgetting the movie title or movie's name is a problem that happens to the youngest, to adults, that happens to old men also.
+Forgetting the movie title or movie's name is a problem that happens to the youngest, the adults and the old men also.
 
-The memory hole does not just happen to the old ones, so let's solve this problem together.
+The memory hole doen't just happen to the old ones, so let's solve this problem together.
 
 
 ### 4.3 List of Features
@@ -131,7 +131,7 @@ There are several monetization strategies worth exploring. The strategy we'll ch
 
 Conventional monetization models include advertising, pay per download, in-app purchases, freemium, and subscriptions.
 
-For now, we will not use any monetization model; We will come back to this topic a little later in our project and we don't forget that the goal is also to make money.
+For now, we won't use any monetization model; We'll come back to this topic a little later in our project and we don't forget that the goal is also to make money.
 
 
 ### 4.5 Product & Technical Specifications
@@ -140,7 +140,7 @@ Product and technical specifications outline the systemic and functional needs t
 
 To make it simple, here we will do a question/answer game.
 
-* What platforms will the app will you use ? 
+* What platforms the app will you use ? 
 
 	* Answer : iOS & Android
 
