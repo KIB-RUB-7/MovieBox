@@ -24,7 +24,7 @@ In addition, the list of films will contain a description of each film, facilita
   * You can check this official web page of ['React Native'](https://facebook.github.io/react-native/docs/getting-started.html#using-a-virtual-device) to get an idea of ​​what it looks like and to find out what it is ...
 
 -------------------------------------------------------------------------------
-## Project contents
+## 1. Project contents
 
 In this project, we have 5 major steps to carry out for the complete realization of our mobile application.
 
@@ -36,16 +36,16 @@ the main stages of this project by order of execution are the following :
    4. Write the final report (and writing other documents as part of the realization of this project) ;
    5. App Preparation for Apple and Google Stores ...
 
-## Team members & responsibilities of each member
+## 2. Team members & responsibilities of each member
 
-### Team members :
+### 2.1 Team members :
 
 Our team of work includes 2 developers, both are students in computer science and technology at [*Wuhan University*](https://www.whu.edu.cn/) :
    * KIBWILA KIFILU PHINEES (Team Captain)
    * RUBANGO MUSIMWA MARIE I.N. (Assistant Captain)
 
 
-### responsibilities of each developer
+### 2.2 responsibilities of each developer
 
    * KIBWILA PHINEES KIFILU :
 
@@ -68,7 +68,7 @@ Our team of work includes 2 developers, both are students in computer science an
 
 -------------------------------------------------------------------------------
 
-## Requirements Analysis
+## 3. Requirements Analysis
 
 To develop software products that truly meet the needs of users, you must first understand the needs of your users.
 A deep understanding of software requirements is a prerequisite for the success of software development.
@@ -87,14 +87,14 @@ Visually, here is what our final application will look like :    ...
 
 ![80% center](images/Untitled_Diagram.png)
 
-## Mobile Application Requirement
+## 4 . Mobile Application Requirement
 
-### Mobile App Objective(s)
+### 4.1 Mobile App Objective(s)
 
 The mobile application MovieBox will allow fans and moviegoers to have a hand catalog of movies that they have already seen and liked, as well as future movies they will follow and like, our users will have a directory of movies easy to access anytime and anywhere.
 
 
-### Product Vision Statement
+### 4.2 Product Vision Statement
 
 A vision statement defines a clear direction towards the end goal of the mobile app. 
 On top of that, a vision statement describes the solution to the problem your intended users are facing. 
@@ -105,7 +105,7 @@ Forgetting the movie title or movie's name is a problem that happens to the youn
 The memory hole does not just happen to the old ones, so let's solve this problem together.
 
 
-### Create a List of Features
+### 4.3 Create a List of Features
 
 The first version of the MovieBox mobile app needs to offer a simple and intuitive user experience. 
 Choosing features for a mobile app is a planning process that requires you to define the product vision, objectives, and themes fully. 
@@ -125,7 +125,7 @@ Here are the standard features that MovieBox will include:
 The list above is only a small list of potential features MovieBox might require. 
 Understanding how a user will navigate through the MovieBox app is critical for identifying the necessary features that will allow for seamless user experience.
 
-### Monetization Model
+### 4.4 Monetization Model
 
 There are several monetization strategies worth exploring. The strategy we'll choose will depend on the type of app y we’re developing, our target user, and even the mobile operating system we're going to utilize.
 
@@ -134,7 +134,7 @@ Conventional monetization models include advertising, pay per download, in-app p
 For now, we will not use any monetization model; We will come back to this topic a little later in our project and we don't forget that the goal is also to make money.
 
 
-### Product & Technical Specifications
+### 4.5 Product & Technical Specifications
 
 Product and technical specifications outline the systemic and functional needs to meet for the product to achieve the desired features and functionalities.
 
@@ -168,7 +168,7 @@ To make it simple, here we will do a question/answer game.
 		* Update frequency will depend on user feedback, data, and team size ;
 		* we plan 2-4 months updates in advance but we keep attuned to market demands.
 
-### Choosing a Platform for MovieBox
+### 4.6 Platform for MovieBox
 
 In this project, we choose to create a native app for Android and iOS using [React](https://facebook.github.io/react-native/).
 [React Native](https://facebook.github.io/react-native/) combines the best parts of native development with React, a best-in-class JavaScript library for building user interfaces.
@@ -188,14 +188,14 @@ React Native is being used in thousands of apps, but it's likely you've already 
 
 -------------------------------------------------------------------------------
 
-### Constraints
+### 5. Constraints
 
 The constraints we face are related to scope, budget and time.
 However, our constraints include aspects such as risk tolerance, resources / personnel and quality requirements.
 
 -------------------------------------------------------------------------------
 
-### Submission
+### 6. Submission
 
 MovieBox mobile app requirements document will include all technical assets and information required for Apple’s App Store submission and Google Play submission. 
 
@@ -248,7 +248,7 @@ While these will vary depending on the app stores being submitted to, below are 
 * Screenshots (correct sizes based on devices)
 -------------------------------------------------------------------------------
 
-## Keywords
+## 7. Keywords
 
 #### product Requirements Document (PRD)
 #### Create React Native App (CRNA)
@@ -258,7 +258,7 @@ While these will vary depending on the app stores being submitted to, below are 
 
 -------------------------------------------------------------------------------
 
-## Developers & Contributor(s)
+## 8. Developers & Contributor(s)
 
 * [**Kibwila Panehsy K.**](https://github.com/KIB-Phi-Kif)
 
