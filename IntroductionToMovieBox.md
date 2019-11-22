@@ -105,7 +105,7 @@ Forgetting the movie title or movie's name is a problem that happens to the youn
 The memory hole does not just happen to the old ones, so let's solve this problem together.
 
 
-### 4.3 Create a List of Features
+### 4.3 List of Features
 
 The first version of the MovieBox mobile app needs to offer a simple and intuitive user experience. 
 Choosing features for a mobile app is a planning process that requires you to define the product vision, objectives, and themes fully. 
