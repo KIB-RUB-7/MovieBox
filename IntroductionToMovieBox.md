@@ -82,7 +82,7 @@ No matter how well people do their design and coding work, programs that don't m
    * Share movies with your contacts with iOS / Android sharing;
    * use the native components of the phone, taking a picture or selecting it in your gallery;
 
-i
+
 Visually, here is what our final application will look like :    ...
 
 ![80% center](images/Untitled_Diagram.png)
