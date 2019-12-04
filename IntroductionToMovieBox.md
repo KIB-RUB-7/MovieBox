@@ -5,7 +5,7 @@ Welcome to this project about Mobile App using the React Native framework! This 
 
 ### Where does the idea of ​​creating our MovieBox Mobile App come from ?
 
-We all know this situation where we discuss a movie with our friends, we boast of its merits, but you can not remember the title! 
+You all know this situation where you discuss a movie with your friends, you boast of its merits, but you can not remember the title! 
 Or this text that we receive: "Hey, what's the name of the movie you've already told me about?"
 
 No more blockages, endless expectations, grilled neurons to think. Here we propose to make a mobile application to manage your movies.
