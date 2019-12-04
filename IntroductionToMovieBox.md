@@ -127,7 +127,7 @@ Understanding how a user will navigate through the MovieBox app is critical for 
 
 ### 4.4 Monetization Model
 
-There are several monetization strategies worth exploring. The strategy we'll choose will depend on the type of app y we’re developing, our target user, and even the mobile operating system we're going to utilize.
+There are several monetization strategies worth exploring. The strategy we'll choose will depend on the type of app we’re developing, our target user, and even the mobile operating system we're going to utilize.
 
 Conventional monetization models include advertising, pay per download, in-app purchases, freemium, and subscriptions.
 
