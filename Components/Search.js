@@ -16,19 +16,14 @@ class Search extends React.Component {
     this.searchedText = "" // Initialization of our searchedText data out of the state
     this.state = {
       films: []
-      isLoading: false
     }
   }
 
   _loadFilms() {
-    this.setState({isLoading: true})      // isLoading : true = it loads when the search is in progress ...
       if (this.searchedText.length > 0) { // Only if the searched text is not empty
-        getFilmsFromApiWithSearchedText(this.searchedText).then(data =>
-            this.setState({
-              films: data.results,
-              isLoading: false
-          })
-        )
+        getFilmsFromApiWithSearchedText(this.searchedText).then(data => {
+            this.setState({ films: data.results })
+        })
       }
     }
 
@@ -36,14 +31,13 @@ class Search extends React.Component {
     this.searchedText = text  // Modification of the searched text at each text entry, without going through the setState as before
   }
   render() {
-   console.log("this.state.isLoading")
+   console.log("RENDER")
    return (
      <View style={styles.main_container}>
        <TextInput
          style={styles.textinput}
-         placeholder='Movie Title'
+         placeholder=' Movie Title '
          onChangeText={(text) => this._searchTextInputChanged(text)}
-         onSubmitEditing={() => this._loadFilms()}  //This line allows us to launch a search just by clicking the enter button on the keyboard
        />
        <Button title='search' onPress={() => this._loadFilms()}/>
        <FlatList
