@@ -22,11 +22,11 @@ class Search extends React.Component {
   _loadFilms() {
       this.setState({ isLoading:true})
       if (this.searchedText.length > 0) { // Only if the searched text is not empty
-        getFilmsFromApiWithSearchedText(this.searchedText，this.page+1).then(data => {
+        getFilmsFromApiWithSearchedText(this.searchedText, this.page+1).then(data => {
             this.page = data.page
             this.totalPages = data.total_pages
             this.setState({
-              films: [ ...this.state.films, ...data.results ],  //I can also code like this -:- ~ films: this.state.films.concat(data.results),
+              films: this.state.films.concat(data.results),  //I can also code like this -:- ~ films: [ ...this.state.films, ...data.results ],
               isLoading:false
             })
         })
@@ -46,23 +46,36 @@ class Search extends React.Component {
   _searchTextInputChanged(text) {
     this.searchedText = text  // Modification of the searched text at each text entry, without going through the setState as before
   }
+
+  _saerchFilms(){
+    this.page = 0
+    this.totalPages = 0
+    this.setState({
+      films: []
+    })
+    console.log("Page : " + this.page + " /totalPages : " + this.totalPages + " /Number of movies : " + this.state.films.length);
+    this._loadFilms()
+  }
   render() {
    console.log("this.state.isLoading")
    return (
      <View style={styles.main_container}>
        <TextInput
-	       onSubmitEditing={() => this._loadFilms()}
+	       onSubmitEditing={() => this._saerchFilms()}
          style={styles.textinput}
          placeholder='Movie Title'
          onChangeText={(text) => this._searchTextInputChanged(text)}
        />
-       <Button title='search' onPress={() => this._loadFilms()}/>
+       <Button title='search' onPress={() => this._saerchFilms()}/>
        <FlatList
          data={this.state.films}
          keyExtractor={(item) => item.id.toString()}
          onEndReachTreashold={0.5}
          onEndReached={() => {
-           console.log("onEndReached")
+           //console.log("onEndReached")
+           if (this.page < this.totalPages){
+             this._loadFilms()
+           }
          } }
          renderItem={({item}) => <FilmItem film={item}/>}
        />
