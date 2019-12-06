@@ -7,7 +7,7 @@
 
   1. When we open the application, we are on the search page and we will have an interface like this on an iOS;
 
-  ![50% center](images/Search1.png)
+  ![50%center](images/Search1.png)
   
   we can search for any movie...
 
@@ -98,7 +98,7 @@ Here is our mobile application in a few images.
 ## 2. Prototype phase division
 
 Name  | ID | Division of labor
-：-：|：-：|：-：
+:-:|:-:|:-:
  KIB  | 32666002 | iOS interface |
 
  
