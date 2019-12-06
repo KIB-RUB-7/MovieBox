@@ -1,3 +1,4 @@
+
 // Components/Search.js
 
 import React from 'react'
@@ -33,6 +34,21 @@ class Search extends React.Component {
       }
     }
 
+  _searchTextInputChanged(text) {
+    this.searchedText = text  // Modification of the searched text at each text entry, without going through the setState as before
+  }
+
+  _saerchFilms(){
+    this.page = 0
+    this.totalPages = 0
+    this.setState({
+      films: [],
+    }, () => {
+      //console.log("Page : " + this.page + " /totalPages : " + this.totalPages + " /Number of movies : " + this.state.films.length);
+      this._loadFilms()
+    })
+  }
+
   _displayLoading(){
     if (this.state.isLoading){
       return(
@@ -43,19 +59,6 @@ class Search extends React.Component {
     }
   }
 
-  _searchTextInputChanged(text) {
-    this.searchedText = text  // Modification of the searched text at each text entry, without going through the setState as before
-  }
-
-  _saerchFilms(){
-    this.page = 0
-    this.totalPages = 0
-    this.setState({
-      films: []
-    })
-    console.log("Page : " + this.page + " /totalPages : " + this.totalPages + " /Number of movies : " + this.state.films.length);
-    this._loadFilms()
-  }
   render() {
    console.log("this.state.isLoading")
    return (
