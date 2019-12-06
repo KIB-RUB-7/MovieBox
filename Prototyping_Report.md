@@ -103,7 +103,7 @@ Name  | ID | Division of labor
 
  
 
-
+- NB: The interface of Android is almost the same as that of iOS, except some native aspects that make the difference between the 2 platforms
 
 We will update this file according to the pace of progress of our work... 
 
