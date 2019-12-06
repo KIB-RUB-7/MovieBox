@@ -22,7 +22,7 @@ In addition, the list of movies'll contain a description of each movie, facilita
   * You don't need to know 'React Native' to keep pace with our project。
 
   * You can check this official web page of ['React Native'](https://facebook.github.io/react-native/docs/getting-started.html#using-a-virtual-device) to get an idea of ​​what it looks like and to find out what it is ...
-
+  
 -------------------------------------------------------------------------------
 ## 1. Project contents
 
