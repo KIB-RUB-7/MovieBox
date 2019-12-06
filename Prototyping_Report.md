@@ -1,7 +1,7 @@
 # Anatomy of the prototype
 
 
-## 1.iOS prototype analysis
+## 1. iOS prototype analysis
 
 ### 1.1. Search interface
 
@@ -84,7 +84,7 @@
 
   We're done with the favorites, now switch to the latest interface (News).
 
-###  1.3.News interface
+###  1.3. News interface
 
   - In the news interface, we see all new movies, from newest to oldest;
 
@@ -104,6 +104,9 @@ Name  | ID | Division of labor
  
 
 
-Prototyping Report is being written ... We will update this file according to the pace of progress of our work... 
+
+We will update this file according to the pace of progress of our work... 
 
 Thank you for reading our post!
+
+
