@@ -52,19 +52,19 @@
 
   3. Then,  we click on the heart to place it in the list of favorites
 
-  ![50% center](images/Fav3.png)
+  ![50% center](images/fav3.png)
 
   4. if we go back to the favorite movies we will see the second movie appear
 
-  ![50% center](images/Fav4.png)
+  ![50% center](images/fav4.png)
 
   5. If we click and remove the heart ;
 
-  ![50% center](images/Fav5.png) 
+  ![50% center](images/fav5.png) 
 
   6. And when we go back to the favorite movies, we will have :
 
-  ![50% center](images/Fav6.png) 
+  ![50% center](images/fav6.png) 
 
   7. and just above, in the favorites, there is the possibility to put a profile picture (as the avatar)
 
