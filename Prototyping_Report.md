@@ -7,7 +7,7 @@
 
   1. When we open the application, we are on the search page and we will have an interface like this on an iOS;
 
-  ![50%center](images/Search1.png)
+  ![80% center](images/Search1.png)
   
   we can search for any movie...
 
