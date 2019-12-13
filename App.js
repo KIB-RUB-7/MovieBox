@@ -1,12 +1,12 @@
 // App.js
 
 import React from 'react'
-import Search from './Navigation/Navigation'
+import Navigation from './Navigation/Navigation.js'
 
 export default class App extends React.Component {
   render() {
     return (
-      <Navigation/>
+      <navigation/>
     )
   }
 }
