@@ -15,3 +15,5 @@ export function getFilmDetailFromApi (id) {
     .then((response) => response.json())
     .catch((error) => console.log(error));
 }
+
+export default getFilmsFromApiWithSearchedText
