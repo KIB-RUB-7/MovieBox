@@ -1,13 +1,13 @@
 # Anatomy of the prototype
 
 
-## 1.iOS prototype analysis
+## 1. iOS prototype analysis
 
 ### 1.1. Search interface
 
   1. When we open the application, we are on the search page and we will have an interface like this on an iOS;
 
-  ![50% center](images/Search1.png)
+  ![80% center](images/Search1.png)
   
   we can search for any movie...
 
@@ -52,19 +52,19 @@
 
   3. Then,  we click on the heart to place it in the list of favorites
 
-  ![50% center](images/Fav3.png)
+  ![50% center](images/fav3.png)
 
   4. if we go back to the favorite movies we will see the second movie appear
 
-  ![50% center](images/Fav4.png)
+  ![50% center](images/fav4.png)
 
   5. If we click and remove the heart ;
 
-  ![50% center](images/Fav5.png) 
+  ![50% center](images/fav5.png) 
 
   6. And when we go back to the favorite movies, we will have :
 
-  ![50% center](images/Fav6.png) 
+  ![50% center](images/fav6.png) 
 
   7. and just above, in the favorites, there is the possibility to put a profile picture (as the avatar)
 
@@ -84,7 +84,7 @@
 
   We're done with the favorites, now switch to the latest interface (News).
 
-###  1.3.News interface
+###  1.3. News interface
 
   - In the news interface, we see all new movies, from newest to oldest;
 
@@ -98,12 +98,15 @@ Here is our mobile application in a few images.
 ## 2. Prototype phase division
 
 Name  | ID | Division of labor
-：-：|：-：|：-：
+:-:|:-:|:-:
  KIB  | 32666002 | iOS interface |
 
  
 
+- NB: The interface of Android is almost the same as that of iOS, except some native aspects that make the difference between the 2 platforms
 
-Prototyping Report is being written ... We will update this file according to the pace of progress of our work... 
+We will update this file according to the pace of progress of our work... 
 
 Thank you for reading our post!
+
+
