@@ -1,100 +1,169 @@
-// Components/FilmItem.js
+// Components/FilmDetail.js
 
 import React from 'react'
-import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
-import { getImageFromApi } from '../API/TMDBApi'
+import { StyleSheet, View, Text, ActivityIndicator, ScrollView, Image, TouchableOpacity } from 'react-native'
+import { getFilmDetailFromApi, getImageFromApi } from '../API/TMDBApi'
+import moment from 'moment'
+import numeral from 'numeral'
+import { connect } from 'react-redux'
 
-class FilmItem extends React.Component {
+class FilmDetail extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      film: undefined,
+      isLoading: false
+    }
+  }
+
+  componentDidMount() {
+    const favoriteFilmIndex = this.props.favoritesFilm.findIndex(item => item.id === this.props.navigation.state.params.idFilm)
+    if (favoriteFilmIndex !== -1) { // Film déjà dans nos favoris, on a déjà son détail
+      // Pas besoin d'appeler l'API ici, on ajoute le détail stocké dans notre state global au state de notre component
+      this.setState({
+        film: this.props.favoritesFilm[favoriteFilmIndex]
+      })
+      return
+    }
+    // Le film n'est pas dans nos favoris, on n'a pas son détail
+    // On appelle l'API pour récupérer son détail
+    this.setState({ isLoading: true })
+    getFilmDetailFromApi(this.props.navigation.state.params.idFilm).then(data => {
+      this.setState({
+        film: data,
+        isLoading: false
+      })
+    })
+  }
+
+  _displayLoading() {
+    if (this.state.isLoading) {
+      return (
+        <View style={styles.loading_container}>
+          <ActivityIndicator size='large' />
+        </View>
+      )
+    }
+  }
+
+  _toggleFavorite() {
+    const action = { type: "TOGGLE_FAVORITE", value: this.state.film }
+    this.props.dispatch(action)
+  }
 
   _displayFavoriteImage() {
-    if (this.props.isFilmFavorite) {
-      // Si la props isFilmFavorite vaut true, on affiche le 🖤
+    var sourceImage = require('../Images/ic_favorite_border.png')
+    if (this.props.favoritesFilm.findIndex(item => item.id === this.state.film.id) !== -1) {
+      // Film dans nos favoris
+      sourceImage = require('../Images/ic_favorite.png')
+    }
+    return (
+      <Image
+        style={styles.favorite_image}
+        source={sourceImage}
+      />
+    )
+  }
+
+  _displayFilm() {
+    const { film } = this.state
+    if (film != undefined) {
       return (
-        <Image
-          style={styles.favorite_image}
-          source={require('../Images/ic_favorite.png')}
-        />
+        <ScrollView style={styles.scrollview_container}>
+          <Image
+            style={styles.image}
+            source={{uri: getImageFromApi(film.backdrop_path)}}
+          />
+          <Text style={styles.title_text}>{film.title}</Text>
+          <TouchableOpacity
+            style={styles.favorite_container}
+            onPress={() => this._toggleFavorite()}>
+            {this._displayFavoriteImage()}
+          </TouchableOpacity>
+          <Text style={styles.description_text}>{film.overview}</Text>
+          <Text style={styles.default_text}>Sorti le {moment(new Date(film.release_date)).format('DD/MM/YYYY')}</Text>
+          <Text style={styles.default_text}>Note : {film.vote_average} / 10</Text>
+          <Text style={styles.default_text}>Nombre de votes : {film.vote_count}</Text>
+          <Text style={styles.default_text}>Budget : {numeral(film.budget).format('0,0[.]00 $')}</Text>
+          <Text style={styles.default_text}>Genre(s) : {film.genres.map(function(genre){
+              return genre.name;
+            }).join(" / ")}
+          </Text>
+          <Text style={styles.default_text}>Companie(s) : {film.production_companies.map(function(company){
+              return company.name;
+            }).join(" / ")}
+          </Text>
+        </ScrollView>
       )
     }
   }
 
   render() {
-    const { film, displayDetailForFilm } = this.props
     return (
-      <TouchableOpacity
-        style={styles.main_container}
-        onPress={() => displayDetailForFilm(film.id)}>
-        <Image
-          style={styles.image}
-          source={{uri: getImageFromApi(film.poster_path)}}
-        />
-        <View style={styles.content_container}>
-          <View style={styles.header_container}>
-            {this._displayFavoriteImage()}
-            <Text style={styles.title_text}>{film.title}</Text>
-            <Text style={styles.vote_text}>{film.vote_average}</Text>
-          </View>
-          <View style={styles.description_container}>
-            <Text style={styles.description_text} numberOfLines={6}>{film.overview}</Text>
-          </View>
-          <View style={styles.date_container}>
-            <Text style={styles.date_text}>Sorti le 13/12/2017</Text>
-          </View>
-        </View>
-      </TouchableOpacity>
+      <View style={styles.main_container}>
+        {this._displayLoading()}
+        {this._displayFilm()}
+      </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
   main_container: {
-    height: 190,
-    flexDirection: 'row'
+    flex: 1
+  },
+  loading_container: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  scrollview_container: {
+    flex: 1
   },
   image: {
-    width: 120,
-    height: 180,
+    height: 169,
     margin: 5
-  },
-  content_container: {
-    flex: 1,
-    margin: 5
-  },
-  header_container: {
-    flex: 3,
-    flexDirection: 'row'
   },
   title_text: {
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: 35,
     flex: 1,
     flexWrap: 'wrap',
-    paddingRight: 5
+    marginLeft: 5,
+    marginRight: 5,
+    marginTop: 10,
+    marginBottom: 10,
+    color: '#000000',
+    textAlign: 'center'
   },
-  vote_text: {
-    fontWeight: 'bold',
-    fontSize: 26,
-    color: '#666666'
-  },
-  description_container: {
-    flex: 7
+  favorite_container: {
+    alignItems: 'center',
   },
   description_text: {
     fontStyle: 'italic',
-    color: '#666666'
+    color: '#666666',
+    margin: 5,
+    marginBottom: 15
   },
-  date_container: {
-    flex: 1
-  },
-  date_text: {
-    textAlign: 'right',
-    fontSize: 14
+  default_text: {
+    marginLeft: 5,
+    marginRight: 5,
+    marginTop: 5,
   },
   favorite_image: {
-    width: 25,
-    height: 25,
-    marginRight: 5
+    width: 40,
+    height: 40
   }
 })
 
-export default FilmItem
+const mapStateToProps = (state) => {
+  return {
+    favoritesFilm: state.favoritesFilm
+  }
+}
+
+export default connect(mapStateToProps)(FilmDetail)
