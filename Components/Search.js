@@ -80,7 +80,6 @@ class Search extends React.Component {
           renderItem={({item}) =>
             <FilmItem
               film={item}
-              // Ajout d'une props isFilmFavorite pour indiquer à l'item d'afficher un 🖤 ou non
               isFilmFavorite={(this.props.favoritesFilm.findIndex(film => film.id === item.id) !== -1) ? true : false}
               displayDetailForFilm={this._displayDetailForFilm}
             />
