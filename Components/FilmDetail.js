@@ -121,15 +121,15 @@ class FilmDetail extends React.Component {
             {this._displayFavoriteImage()}
           </TouchableOpacity>
           <Text style={styles.description_text}>{film.overview}</Text>
-          <Text style={styles.default_text}>Sorti le {moment(new Date(film.release_date)).format('DD/MM/YYYY')}</Text>
+          <Text style={styles.default_text}>Released on {moment(new Date(film.release_date)).format('DD/MM/YYYY')}</Text>
           <Text style={styles.default_text}>Note : {film.vote_average} / 10</Text>
-          <Text style={styles.default_text}>Nombre de votes : {film.vote_count}</Text>
+          <Text style={styles.default_text}>Number of votes : {film.vote_count}</Text>
           <Text style={styles.default_text}>Budget : {numeral(film.budget).format('0,0[.]00 $')}</Text>
-          <Text style={styles.default_text}>Genre(s) : {film.genres.map(function(genre){
+          <Text style={styles.default_text}>category : {film.genres.map(function(genre){
               return genre.name;
             }).join(" / ")}
           </Text>
-          <Text style={styles.default_text}>Companie(s) : {film.production_companies.map(function(company){
+          <Text style={styles.default_text}>Production : {film.production_companies.map(function(company){
               return company.name;
             }).join(" / ")}
           </Text>
