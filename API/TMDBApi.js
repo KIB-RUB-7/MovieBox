@@ -24,4 +24,3 @@ export function getBestFilmsFromApi (page) {
 export function getImageFromApi (name) {
   return 'https://image.tmdb.org/t/p/w300' + name
 }
- 
