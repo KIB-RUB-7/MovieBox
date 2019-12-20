@@ -1,7 +1,7 @@
 // Components/FilmDetail.js
 
 import React from 'react'
-import { StyleSheet, Share, View, Text, ActivityIndicator, ScrollView, Image, TouchableOpacity, Platform } from 'react-native'
+import { StyleSheet, Share, View, Text, ActivityIndicator, ScrollView, Image, TouchableOpacity, Platform,Source } from 'react-native'
 import { getFilmDetailFromApi, getImageFromApi } from '../API/TMDBApi'
 import moment from 'moment'
 import numeral from 'numeral'
@@ -11,10 +11,8 @@ class FilmDetail extends React.Component {
 
     static navigationOptions = ({ navigation }) => {
       const { params } = navigation.state
-      // On accède à la fonction shareFilm et au film via les paramètres qu'on a ajouté à la navigation
       if (params.film != undefined && Platform.OS === 'ios') {
         return {
-            // On a besoin d'afficher une image, il faut donc passe par une Touchable une fois de plus
             headerRight: <TouchableOpacity
                             style={styles.share_touchable_headerrightbutton}
                             onPress={() => params.shareFilm()}>
@@ -31,11 +29,9 @@ class FilmDetail extends React.Component {
       film: undefined,
       isLoading: false
     }
-    // Ne pas oublier de binder la fonction _shareFilm sinon, lorsqu'on va l'appeler depuis le headerRight de la navigation, this.state.film sera undefined et fera planter l'application
     this._shareFilm = this._shareFilm.bind(this)
   }
 
-  // Fonction pour faire passer la fonction _shareFilm et le film aux paramètres de la navigation. Ainsi on aura accès à ces données au moment de définir le headerRight
   _updateNavigationParams() {
     this.props.navigation.setParams({
       shareFilm: this._shareFilm,
@@ -43,7 +39,6 @@ class FilmDetail extends React.Component {
     })
   }
 
-  // Dès que le film est chargé, on met à jour les paramètres de la navigation (avec la fonction _updateNavigationParams) pour afficher le bouton de partage
   componentDidMount() {
     const favoriteFilmIndex = this.props.favoritesFilm.findIndex(item => item.id === this.props.navigation.state.params.idFilm)
     if (favoriteFilmIndex !== -1) {
@@ -69,7 +64,7 @@ class FilmDetail extends React.Component {
 
   _displayFloatingActionButton() {
       const { film } = this.state
-      if (film != undefined && Platform.OS === 'android') { // Uniquement sur Android et lorsque le film est chargé
+      if (film != undefined && Platform.OS === 'android') {
         return (
           <TouchableOpacity
             style={styles.share_touchable_floatingactionbutton}
@@ -100,7 +95,6 @@ class FilmDetail extends React.Component {
   _displayFavoriteImage() {
     var sourceImage = require('../Images/ic_favorite_border.png')
     if (this.props.favoritesFilm.findIndex(item => item.id === this.state.film.id) !== -1) {
-      // Film dans nos favoris
       sourceImage = require('../Images/ic_favorite.png')
     }
     return (

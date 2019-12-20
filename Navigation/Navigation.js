@@ -15,7 +15,7 @@ const SearchStackNavigator = createStackNavigator({
   Search: {
     screen: Search,
     navigationOptions: {
-      title: 'Rechercher'
+      title: 'Search'
     }
   },
   FilmDetail: {
@@ -27,7 +27,7 @@ const FavoritesStackNavigator = createStackNavigator({
   Favorites: {
     screen: Favorites,
     navigationOptions: {
-      title: 'Favoris'
+      title: 'Favorite'
     }
   },
   FilmDetail: {

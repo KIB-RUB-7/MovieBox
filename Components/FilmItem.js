@@ -2,20 +2,19 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
-import { getImageFromApi } from '../API/TMDBApi.js' // import the getImageFromApi function
+import { getImageFromApi } from '../API/TMDBApi.js'
 
 class FilmItem extends React.Component {
   render() {
-    const film = this.props.film   //recovery of the 'films' props
+    const film = this.props.film
     const displayDetailForFilm = this.props.displayDetailForFilm
-    //const { film, displayDetailForFilm } = this.props
     return (
       <TouchableOpacity
       onPress={() => displayDetailForFilm(film.id)}
       style={styles.main_container}>
         <Image
           style={styles.image}
-          source={{uri: getImageFromApi(film.poster_path)}} // using our getImageFromApi
+          source={{uri: getImageFromApi(film.poster_path)}}
         />
         <View style={styles.content_container}>
           <View style={styles.header_container}>
@@ -43,7 +42,6 @@ const styles = StyleSheet.create({
     width: 120,
     height: 180,
     margin: 5,
-    //backgroundColor: 'gray'  // -- we gonna don't use it anymore
   },
   content_container: {
     flex: 1,

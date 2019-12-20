@@ -68,18 +68,18 @@ class Search extends React.Component {
       <View style={styles.main_container}>
         <TextInput
           style={styles.textinput}
-          placeholder='Titre du film'
+          placeholder='Movie title'
           onChangeText={(text) => this._searchTextInputChanged(text)}
           onSubmitEditing={() => this._searchFilms()}
         />
-        <Button title='Rechercher' onPress={() => this._searchFilms()}/>
+        <Button title='Search' onPress={() => this._searchFilms()}/>
         <FilmList
           films={this.state.films}
           navigation={this.props.navigation}
           loadFilms={this._loadFilms}
           page={this.page}
           totalPages={this.totalPages}
-          favoriteList={false} // Ici j'ai simplement ajouté un booléen à false pour indiquer qu'on n'est pas dans le cas de l'affichage de la liste des films favoris. Et ainsi pouvoir déclencher le chargement de plus de films lorsque l'utilisateur scrolle.
+          favoriteList={false}
         />
         {this._displayLoading()}
       </View>
