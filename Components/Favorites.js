@@ -7,9 +7,6 @@ import { connect } from 'react-redux'
 import Avatar from './Avatar'
 
 class Favorites extends React.Component {
-
-  class Favorites extends React.Component {
-
     render() {
       return (
         <View style={styles.main_container}>
@@ -24,20 +21,20 @@ class Favorites extends React.Component {
         </View>
       )
     }
-  }
+}
 
-  const styles = StyleSheet.create({
+const styles = StyleSheet.create({
     main_container: {
       flex: 1
     },
     avatar_container: {
       alignItems: 'center'
     }
-  })
+})
 
 const mapStateToProps = state => {
   return {
-    favoritesFilm: state.favoritesFilm
+    favoritesFilm: state.toggleFavorite.favoritesFilm
   }
 }
 
